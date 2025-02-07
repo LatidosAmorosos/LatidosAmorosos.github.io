@@ -13,6 +13,90 @@
             color: #333;
             background: url('https://i.pinimg.com/originals/86/6f/30/866f30792413dcb70ce06c91c1ad3f4e.gif') no-repeat center center fixed;
             background-size: cover;
+            overflow-x: hidden;
+        }
+
+        /* Pantalla de bienvenida */
+        .bienvenida {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #ff4d6d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            z-index: 10;
+            text-align: center;
+            animation: fadeOut 5s forwards ease-in-out;
+        }
+        /* Animación de corazones cayendo */
+        .corazon {
+            position: fixed;
+            top: -50px;
+            font-size: 30px;
+            color: red;
+            opacity: 0.8;
+            animation: caer 5s linear infinite;
+        }
+
+
+/* Texto de bienvenida que desaparece */
+        .mensaje-bienvenida {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            animation: desaparecer 8s ease-out forwards;
+        }
+
+        @keyframes caer {
+            0% { transform: translateY(0) rotate(0); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Texto de bienvenida que desaparece */
+        .mensaje-bienvenida {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            animation: desaparecer 4s ease-out forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+
+        .bienvenida h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff1e56;
+        }
+
+        .bienvenida p {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #ffebf0;
+            text-shadow: 1px 1px 3px #ff4d6d;
         }
 
         header {
@@ -27,6 +111,15 @@
 
         header h1 {
             font-weight: 600;
+        }
+        
+
+        /* Texto adicional bajo el título */
+        .subtitulo {
+            font-size: 18px;
+            color: #d10000;
+            font-weight: bold;
+            margin-top: 5px;
         }
 
         .catalogos {
@@ -76,9 +169,37 @@
     </style>
 </head>
 <body>
-    <header>
+
+  <!-- Animación de corazones -->
+    <script>
+        function crearCorazon() {
+            const corazon = document.createElement("div");
+            corazon.innerHTML = "❤";
+            corazon.classList.add("corazon");
+            corazon.style.left = Math.random() * 100 + "vw";
+            corazon.style.animationDuration = (Math.random() * 2 + 3) + "s";
+            document.body.appendChild(corazon);
+
+            setTimeout(() => {
+                corazon.remove();
+            }, 5000);
+        }
+
+        setInterval(crearCorazon, 300);
+    </script>
+  <!-- Bienvenida animada -->
+    <div class="bienvenida">
+        <div>
+            <h1>Latidos en el parque</h1>
+            <p>Escoge el regalo para tu personaje especial</p>
+        </div>
+    </div>
+
+     <header>
         <h1>Escoge Para Quien Regalar</h1>
+        <p class="subtitulo">Tenemos grandes regalos, buenas ofertas, hacemos pedidos y recreamos ideas de videos famosos</p>
     </header>
+
 
     <main>
         <div class="catalogos">
@@ -90,12 +211,12 @@
                 <img src="https://i.pinimg.com/736x/17/4b/93/174b933d543bc06759f59c3261f3e7ab.jpg" alt="Catálogo 2">
                 <h2>Regalos Para Chicos</h2>
             </a>
-            
         </div>
     </main>
 
     <footer>
         <p>¿Tienes dudas o necesitas ayuda? <a href="https://www.instagram.com/latidosamorosos?utm_source=qr&igsh=M2V6amo3MTNyazFj" target="_blank">Contáctanos aquí</a></p>
     </footer>
+
 </body>
 </html>
