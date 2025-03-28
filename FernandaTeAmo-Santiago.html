@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Fernanda, Mi Amor Bonito</title>
+
+  <!-- Fuentes Kawaii -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      background: url('https://gifdb.com/images/thumbnail/kuromi-with-hearts-dsi3jp1m5wrcq1gj.gif') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 30px 10px;
+      text-align: center;
+      animation: aparecer 2s ease-in-out;
+      border-bottom: 3px solid #ff66cc;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      color: #ffccff;
+      font-size: 4rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #ff99cc;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      color: #ffffff;
+      text-shadow: 0 0 5px #ff99cc;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      margin-top: 20px;
+      border: 2px solid #cc66ff;
+    }
+
+    section { margin-bottom: 40px; }
+
+    h2 {
+      color: #ff99cc;
+      margin-bottom: 15px;
+      font-size: 2.5rem;
+      font-family: 'Great Vibes', cursive;
+      text-shadow: 0 0 8px #ff66cc;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #ffffff;
+      text-shadow: 0 0 5px #ff66cc;
+    }
+
+    .frases {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .frase {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.6);
+      border: 2px solid #ff66cc;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .btn-amor, .btn-sorpresa {
+      background-color: #cc33cc;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: 0.3s;
+      display: inline-block;
+      margin: 20px 10px;
+      box-shadow: 0 0 10px #ff99cc;
+      cursor: pointer;
+    }
+
+    .btn-amor:hover, .btn-sorpresa:hover {
+      background-color: #ff66cc;
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.8rem;
+      color: #ffccff;
+      text-shadow: 0 0 5px #ff66cc;
+    }
+
+    @media(max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      h2 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Música de Fondo -->
+  <audio autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+  </audio>
+
+  <header>
+    <h1>Para Fernanda</h1>
+    <p>Hecho con todo mi amor</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Mi Amor Eterno</h2>
+      <p>Fernanda, cada segundo contigo es un regalo. Esta página es solo una parte de lo mucho que te amo.</p>
+    </section>
+
+    <!-- 365 Frases -->
+    <section>
+      <h2>365 Razones por las que Te Amo</h2>
+      <div class="frases" id="frases-container"></div>
+    </section>
+
+    <!-- Botones -->
+    <section style="text-align: center;">
+      <button class="btn-amor" onclick="alert('¡Te amo hasta el infinito y más allá, Fernanda!')">Haz Click Si Me Amas</button>
+      <button class="btn-sorpresa" onclick="alert('No sabes cuánto te amo, Fernanda')">Click Aquí para Sorpresa</button>
+    </section>
+
+  </div>
+
+  <footer>
+    Hecho con amor infinito por Luis Santiago para Fernanda
+  </footer>
+
+  <script>
+    const frases = [
+    "Día 1: Tu sonrisa ilumina mi día.",
+    "Día 2: Amo la forma en que me miras.",
+    "Día 3: Eres mi primer pensamiento en la mañana.",
+    "Día 4: Eres mi último pensamiento en la noche.",
+    "Día 5: Me haces sentir amado y especial.",
+    "Día 6: Tu risa es mi sonido favorito.",
+    "Día 7: Tus abrazos son mi lugar seguro.",
+    "Día 8: Eres hermosa por dentro y por fuera.",
+    "Día 9: Amo cuando dices mi nombre.",
+    "Día 10: Eres mi compañera perfecta.",
+    "Día 11: Me encanta cuando me besas la frente.",
+    "Día 12: Siempre me apoyas en todo momento.",
+    "Día 13: Adoro la forma en que me motivas a ser mejor.",
+    "Día 14: Eres mi persona favorita en el mundo.",
+    "Día 15: Amo cada pequeño detalle que tienes conmigo.",
+    "Día 16: Me encanta cuando nos reímos sin razón alguna.",
+    "Día 17: Siempre sabes cómo alegrar mi día.",
+    "Día 18: Me haces sentir seguro y amado.",
+    "Día 19: Amo cuando me tomas de la mano.",
+    "Día 20: Eres la mejor parte de mi vida.",
+    "Día 21: Adoro cómo me miras cuando estoy distraído.",
+    "Día 22: Me encanta cuando planeamos el futuro juntos.",
+    "Día 23: Tu ternura me hace sentir afortunado.",
+    "Día 24: Me encanta cuando me abrazas fuerte.",
+    "Día 25: Siempre logras sorprenderme con tu amor.",
+    "Día 26: Me fascina la manera en que te preocupas por mí.",
+    "Día 27: Amo cuando me llamas con cariño.",
+    "Día 28: Eres mi paz en los días difíciles.",
+    "Día 29: Me encanta compartir cada momento contigo.",
+    "Día 30: Tu amor es mi mayor tesoro.",
+    "Día 31: Me fascina ver cómo brillas en todo lo que haces.",
+    "Día 32: Siempre me das fuerzas cuando más lo necesito.",
+    "Día 33: Amo que nunca me dejas solo.",
+    "Día 34: Eres el mejor regalo que la vida me ha dado.",
+    "Día 35: Me encanta cuando me miras fijamente.",
+    "Día 36: Siempre me motivas a no rendirme.",
+    "Día 37: Adoro cuando me dices cuánto me amas.",
+    "Día 38: Me fascina la forma en que me besas.",
+    "Día 39: Eres la razón de mi felicidad.",
+    "Día 40: Amo cuando me acaricias el cabello.",
+    "Día 41: Siempre me das razones para sonreír.",
+    "Día 42: Me encanta tu manera de hacerme sentir especial.",
+    "Día 43: Amo compartir mis sueños contigo.",
+    "Día 44: Me encanta cuando me escribes mensajes lindos.",
+    "Día 45: Tu amor me hace sentir invencible.",
+    "Día 46: Eres mi persona favorita en el mundo.",
+    "Día 47: Amo cuando jugamos como niños.",
+    "Día 48: Siempre logras hacerme sentir querido.",
+    "Día 49: Me encanta verte feliz.",
+    "Día 50: Adoro cuando me cuidas sin que te lo pida.",
+    "Día 51: Me fascina cuando me das besos inesperados.",
+    "Día 52: Amo cuando me abrazas sin razón.",
+    "Día 53: Siempre sabes cómo hacerme sentir mejor.",
+    "Día 54: Me encanta compartir mis días contigo.",
+    "Día 55: Eres mi apoyo en todo momento.",
+    "Día 56: Amo cómo iluminas mi vida.",
+    "Día 57: Me encanta cuando me susurras cosas lindas.",
+    "Día 58: Siempre sabes qué decir para calmarme.",
+    "Día 59: Me haces sentir completo.",
+    "Día 60: Amo la forma en que me tratas con ternura.",
+    "Día 61: Me fascina cuando me tomas del brazo.",
+    "Día 62: Eres mi felicidad diaria.",
+    "Día 63: Me encanta cuando me dices que soy tu todo.",
+    "Día 64: Siempre me haces sentir amado.",
+    "Día 65: Adoro cuando me miras con amor.",
+    "Día 66: Me fascina cuando nos quedamos abrazados sin decir nada.",
+    "Día 67: Me encanta cuando te sonrojas por algo que digo.",
+    "Día 68: Eres la persona con la que quiero compartir mi vida.",
+    "Día 69: Amo cuando planeamos cosas juntos.",
+    "Día 70: Me haces sentir importante.",
+    "Día 71: Me encanta cómo me miras cuando estoy distraído.",
+    "Día 72: Amo cuando nos quedamos despiertos hablando.",
+    "Día 73: Siempre me das fuerzas para seguir adelante.",
+    "Día 74: Me encanta cuando me besas la nariz.",
+    "Día 75: Amo cuando me sorprendes con detalles.",
+    "Día 76: Me fascina cómo te preocupas por mí.",
+    "Día 77: Eres mi amor eterno.",
+    "Día 78: Me encanta cuando me das besos suaves.",
+    "Día 79: Amo la manera en que iluminas mi día.",
+    "Día 80: Me haces sentir amado en todo momento.",
+    "Día 81: Siempre me haces sentir seguro.",
+    "Día 82: Me encanta cuando susurras mi nombre.",
+    "Día 83: Amo cuando me abrazas con fuerza.",
+    "Día 84: Siempre logras hacerme sonreír.",
+    "Día 85: Me fascina cuando jugamos juntos.",
+    "Día 86: Eres mi felicidad.",
+    "Día 87: Me encanta cuando me das besos en la mejilla.",
+    "Día 88: Amo cuando me dices que me extrañas.",
+    "Día 89: Me fascina cuando nos miramos y nos entendemos sin hablar.",
+    "Día 90: Me encanta cuando me acaricias la cara.",
+    "Día 91: Siempre me haces sentir afortunado.",
+    "Día 92: Amo la paz que encuentro en tus brazos.",
+    "Día 93: Me fascina cuando nos decimos cosas bonitas antes de dormir.",
+    "Día 94: Eres mi razón para despertar feliz.",
+    "Día 95: Me encanta cuando planeamos nuestro futuro.",
+    "Día 96: Amo compartir mi felicidad contigo.",
+    "Día 97: Siempre me haces sentir querido.",
+    "Día 98: Me encanta cuando me miras como si fuera tu mundo.",
+    "Día 99: Amo cuando me das besos lentos y suaves.",
+    "Día 100: Me haces sentir que puedo lograrlo todo.",
+"Día 101: Me encanta ver la felicidad en tu rostro.",
+    "Día 102: Me haces sentir que todo es posible.",
+    "Día 103: Amo cuando compartimos nuestras ideas.",
+    "Día 104: Me fascina cuando me miras con esos ojos llenos de amor.",
+    "Día 105: Me haces sentir único y especial.",
+    "Día 106: Amo que siempre te preocupes por mi bienestar.",
+    "Día 107: Me encanta cuando me haces reír con tus bromas.",
+    "Día 108: Adoro la forma en que me cuidas.",
+    "Día 109: Me fascina cómo me haces sentir en casa.",
+    "Día 110: Eres la persona con la que quiero pasar el resto de mi vida.",
+    "Día 111: Amo la forma en que me entiendes sin palabras.",
+    "Día 112: Siempre me haces sentir que valgo la pena.",
+    "Día 113: Me encanta cuando me haces sentir como tu prioridad.",
+    "Día 114: Amo la paz que encuentro en tu abrazo.",
+    "Día 115: Me fascina cómo eres capaz de hacerme sentir mejor en mis peores días.",
+    "Día 116: Siempre encuentro consuelo en tus palabras.",
+    "Día 117: Me encanta cuando compartimos nuestros sueños.",
+    "Día 118: Amo la conexión que tenemos.",
+    "Día 119: Me haces sentir que el mundo es un lugar mejor.",
+    "Día 120: Me encanta cuando me dices que me amas.",
+    "Día 121: Amo cuando compartimos nuestros recuerdos.",
+    "Día 122: Siempre logras hacerme sentir importante.",
+    "Día 123: Me fascina cuando me tomas de la mano.",
+    "Día 124: Me encanta ver tu felicidad.",
+    "Día 125: Me haces sentir que no hay nada que temer cuando estoy contigo.",
+    "Día 126: Amo cuando me das besos en la frente.",
+    "Día 127: Me fascina cómo me haces sentir en paz.",
+    "Día 128: Siempre me haces sentir que todo va a estar bien.",
+    "Día 129: Me encanta cuando nos damos el tiempo de hablar y escuchar.",
+    "Día 130: Amo cuando me apoyas en todo lo que hago.",
+    "Día 131: Me fascina cuando compartimos nuestras preocupaciones y sueños.",
+    "Día 132: Me haces sentir increíblemente afortunado de tenerte en mi vida.",
+    "Día 133: Me encanta cuando me dices que no hay nada que te gustaría cambiar de mí.",
+    "Día 134: Amo lo bien que te ves cuando te ries.",
+    "Día 135: Me fascina la manera en que me haces sentir feliz con tan poco.",
+    "Día 136: Siempre sabes cómo hacerme sentir bien.",
+    "Día 137: Me encanta cuando me dices que siempre estarás a mi lado.",
+    "Día 138: Amo cuando te veo sonreír por algo que hice.",
+    "Día 139: Me haces sentir afortunado de tenerte como compañera.",
+    "Día 140: Me encanta ver cómo creces y te conviertes en una persona más increíble cada día.",
+    "Día 141: Me fascina que puedas entenderme tan bien.",
+    "Día 142: Amo la forma en que me haces sentir especial.",
+    "Día 143: Me haces sentir que todo es posible.",
+    "Día 144: Me encanta cuando nos encontramos en momentos felices.",
+    "Día 145: Amo cuando me dices que me extrañas.",
+    "Día 146: Me fascina cómo iluminas mi día solo con tu presencia.",
+    "Día 147: Me encanta que siempre confíes en mí.",
+    "Día 148: Eres lo mejor que me ha pasado en la vida.",
+    "Día 149: Me haces sentir que todo tiene un propósito.",
+    "Día 150: Me encanta cuando haces cosas pequeñas que significan mucho.",
+    "Día 151: Amo cuando me sorprendes con algo bonito.",
+    "Día 152: Me fascina cómo siempre estás pendiente de mí.",
+    "Día 153: Me encanta cuando me haces sentir que soy tu todo.",
+    "Día 154: Eres mi inspiración para ser mejor cada día.",
+    "Día 155: Me haces sentir más fuerte y capaz de lograr lo que sea.",
+    "Día 156: Me encanta cuando compartimos risas y buenos momentos.",
+    "Día 157: Amo que siempre estés dispuesta a hacerme feliz.",
+    "Día 158: Me fascina cómo me haces sentir querido en cada momento.",
+    "Día 159: Me encanta cuando me dices lo mucho que me amas.",
+    "Día 160: Amo cómo me haces sentir cuando estamos juntos.",
+    "Día 161: Me haces sentir como si no hubiera nadie más importante que yo.",
+    "Día 162: Me encanta cómo me entiendes incluso cuando no digo nada.",
+    "Día 163: Amo la forma en que me haces ver la vida de manera diferente.",
+    "Día 164: Me fascina que siempre busques lo mejor para nosotros.",
+    "Día 165: Me encanta cuando me haces sentir que puedo ser yo mismo.",
+    "Día 166: Amo cuando estamos juntos y el tiempo se detiene.",
+    "Día 167: Me haces sentir que todo lo que haga será mejor si estás a mi lado.",
+    "Día 168: Me encanta cuando me dices que soy el amor de tu vida.",
+    "Día 169: Amo la alegría que traes a mi vida.",
+    "Día 170: Me fascina cuando nos apoyamos mutuamente.",
+    "Día 171: Me encanta cuando me haces sentir como el hombre más afortunado del mundo.",
+    "Día 172: Amo cuando me abrazas y me dices que todo estará bien.",
+    "Día 173: Me haces sentir que puedo superar cualquier desafío.",
+    "Día 174: Me encanta cuando me dices que me amas con todo tu corazón.",
+    "Día 175: Amo cuando hablamos sobre nuestro futuro juntos.",
+    "Día 176: Me fascina cómo eres capaz de hacerme sentir increíble en cada momento.",
+    "Día 177: Me encanta cuando estamos en silencio y solo disfrutamos de nuestra compañía.",
+    "Día 178: Amo cuando me haces sentir amado incluso sin palabras.",
+    "Día 179: Me haces sentir más feliz de lo que jamás imaginé.",
+    "Día 180: Me encanta cuando me dices que me entiendes.",
+    "Día 181: Me fascina que siempre me des apoyo incondicional.",
+    "Día 182: Amo cómo me haces sentir valioso para ti.",
+    "Día 183: Me haces sentir completo de muchas maneras.",
+    "Día 184: Me encanta cuando compartimos historias y recuerdos.",
+    "Día 185: Amo que puedas ser tú misma conmigo.",
+    "Día 186: Me fascina que siempre busques lo mejor para los dos.",
+    "Día 187: Me encanta cuando compartimos nuestras esperanzas y sueños.",
+    "Día 188: Amo que me hagas sentir especial y único.",
+    "Día 189: Me haces sentir que todo es mejor cuando estás a mi lado.",
+    "Día 190: Me encanta cuando me dices que siempre estarás conmigo.",
+    "Día 191: Amo cuando compartimos nuestro amor y nos cuidamos mutuamente.",
+    "Día 192: Me fascina cómo me haces sentir en paz.",
+    "Día 193: Me encanta cuando me sorprendes con un gesto lindo.",
+    "Día 194: Amo que siempre estés ahí cuando te necesito.",
+    "Día 195: Me haces sentir que siempre hay algo por lo que sonreír.",
+    "Día 196: Me encanta cuando me haces sentir importante para ti.",
+    "Día 197: Amo cuando me dices que te haces feliz.",
+    "Día 198: Me fascina la forma en que me haces sentir a tu lado.",
+    "Día 199: Me encanta cuando me tomas de la mano sin razón.",
+    "Día 200: Amo cuando me dices que soy la razón de tu felicidad.",
+    "Día 201: Me haces sentir que mi vida tiene más sentido contigo.",
+    "Día 202: Me encanta cuando me haces sentir amado sin esfuerzo.",
+    "Día 203: Amo cuando compartimos nuestros secretos y sueños.",
+    "Día 204: Me fascina cuando te preocupas por mí incluso en los momentos difíciles.",
+    "Día 205: Me encanta cuando nos reímos juntos sin motivo alguno.",
+    "Día 206: Amo que siempre busques formas de hacerme feliz.",
+    "Día 207: Me haces sentir que no hay obstáculos si estamos juntos.",
+    "Día 208: Me encanta cuando me haces sentir que soy todo para ti.",
+    "Día 209: Amo cuando me dices que te importo mucho.",
+    "Día 210: Me fascina cuando me miras con esos ojos llenos de amor.",
+    "Día 211: Me haces sentir como si no hubiera nadie más importante que yo.",
+    "Día 212: Me encanta cuando me dices que siempre estarás ahí.",
+    "Día 213: Amo cuando me haces sentir seguro y protegido.",
+    "Día 214: Me fascina cuando nos entendemos sin decir una palabra.",
+    "Día 215: Me encanta cuando me besas como si fuera la última vez.",
+    "Día 216: Amo que siempre me hagas sentir amado.",
+    "Día 217: Me haces sentir que no hay nadie más importante que tú.",
+    "Día 218: Me encanta cuando me haces sentir feliz solo por estar contigo.",
+    "Día 219: Amo cuando me dices que soy tu todo.",
+    "Día 220: Me fascina cuando me sorprendes con tus detalles.",
+    "Día 221: Me encanta cuando me haces sentir que no hay nada que temer.",
+    "Día 222: Amo cuando me dices que nunca me dejarás.",
+    "Día 223: Me haces sentir que todo lo que necesito es tu amor.",
+    "Día 224: Me encanta cuando estamos juntos, y el mundo desaparece.",
+    "Día 225: Amo cuando me dices que te haces feliz.",
+    "Día 226: Me fascina cuando compartimos nuestras pasiones.",
+    "Día 227: Me encanta cuando me haces sentir que puedo ser mi verdadero yo.",
+    "Día 228: Amo que siempre te preocupes por mi bienestar.",
+    "Día 229: Me haces sentir que no necesito nada más para ser feliz.",
+    "Día 230: Me encanta cuando me miras con esos ojos llenos de cariño.",
+    "Día 231: Amo cuando compartimos una sonrisa sin motivo.",
+    "Día 232: Me fascina cuando me dices que todo estará bien.",
+    "Día 233: Me encanta cuando me abrazas sin razón.",
+    "Día 234: Amo cuando me haces sentir que soy parte de tu vida.",
+    "Día 235: Me fascina cuando me dices que te quiero mucho.",
+    "Día 236: Me haces sentir que no hay nada que no podamos hacer juntos.",
+    "Día 237: Me encanta cuando me haces sentir como si fuera el único en tu vida.",
+    "Día 238: Amo cuando me dices que todo es mejor a tu lado.",
+    "Día 239: Me fascina que siempre sepas cómo hacerme feliz.",
+    "Día 240: Me encanta cuando nos damos tiempo para nosotros.",
+    "Día 241: Amo cuando me dices que soy lo más importante para ti.",
+    "Día 242: Me haces sentir que todo lo que hago tiene un propósito.",
+    "Día 243: Me encanta cuando me dices que te has enamorado aún más de mí.",
+    "Día 244: Amo cuando compartimos momentos que se quedarán en el corazón.",
+    "Día 245: Me fascina que siempre logras hacerme sonreír.",
+    "Día 246: Me encanta cuando me haces sentir tan feliz.",
+    "Día 247: Amo cuando me tomas de la mano y no la sueltas.",
+    "Día 248: Me haces sentir que mi vida tiene un nuevo significado.",
+    "Día 249: Me encanta cuando me dices que eres feliz a mi lado.",
+    "Día 250: Amo cuando me miras como si fuera lo mejor de tu vida.",
+    "Día 251: Me fascina cómo siempre estás ahí cuando te necesito.",
+    "Día 252: Me encanta cuando me haces sentir que lo somos todo.",
+    "Día 253: Amo cuando me dices que todo lo que hago te hace feliz.",
+    "Día 254: Me haces sentir más feliz de lo que jamás imaginé.",
+    "Día 255: Me encanta cuando me haces sentir amado con pequeños detalles.",
+    "Día 256: Amo cuando me miras y veo en tus ojos lo mucho que te importo.",
+    "Día 257: Me fascina cómo me haces sentir cada día más especial.",
+    "Día 258: Me encanta cuando compartimos lo mejor de nosotros.",
+    "Día 259: Amo cuando me dices que soy la persona con la que quieres estar.",
+    "Día 260: Me haces sentir que todo lo que hago tiene valor.",
+    "Día 261: Me encanta cuando me dices que soy tu amor eterno.",
+    "Día 262: Amo cuando compartimos todo lo bueno y lo malo.",
+    "Día 263: Me fascina cómo puedes hacerme sentir especial incluso en los días malos.",
+    "Día 264: Me encanta cuando me dices que juntos somos invencibles.",
+    "Día 265: Amo que me hagas sentir único.",
+    "Día 266: Me fascina que siempre me hagas sentir en paz.",
+    "Día 267: Me encanta cuando me dices que soy la razón de tu felicidad.",
+    "Día 268: Amo cuando compartimos momentos que solo tú y yo entendemos.",
+    "Día 269: Me haces sentir afortunado de tenerte.",
+    "Día 270: Me encanta cuando me dices que siempre estarás a mi lado.",
+    "Día 271: Amo cuando te preocupas por mi bienestar.",
+    "Día 272: Me fascina cómo logras hacerme sentir increíble con tus palabras.",
+    "Día 273: Me encanta cuando compartimos momentos simples pero significativos.",
+    "Día 274: Amo que cada día contigo es un regalo.",
+    "Día 275: Me haces sentir que todo es mejor cuando estamos juntos.",
+    "Día 276: Me encanta cuando me dices que te haces feliz.",
+    "Día 277: Amo que me hagas sentir que puedo ser yo mismo.",
+    "Día 278: Me fascina que me hagas sentir tan importante.",
+    "Día 279: Me encanta cuando compartimos risas y felicidad.",
+    "Día 280: Amo cuando me dices que siempre seré tu amor.",
+    "Día 281: Me haces sentir que la vida tiene más sentido contigo.",
+    "Día 282: Me encanta cuando me dices que soy la razón de tu sonrisa.",
+"Día 283: Amo cuando te ves feliz por algo que hemos logrado juntos.",
+    "Día 284: Me fascina la manera en que compartimos nuestros miedos y sueños.",
+    "Día 285: Me encanta cuando nos damos tiempo para nosotros mismos.",
+    "Día 286: Amo cuando compartimos nuestra alegría y nuestra tristeza.",
+    "Día 287: Me haces sentir que todo lo que necesito está a tu lado.",
+    "Día 288: Me encanta cuando me dices que somos perfectos el uno para el otro.",
+    "Día 289: Amo cuando me haces sentir que todo será mejor a tu lado.",
+    "Día 290: Me fascina que siempre tienes una forma especial de hacerme sonreír.",
+    "Día 291: Me encanta cuando te preocupas por cada pequeño detalle.",
+    "Día 292: Amo cuando me dices que te haces feliz solo por verme feliz.",
+    "Día 293: Me haces sentir tan amado que no puedo dejar de sonreír.",
+    "Día 294: Me encanta cuando compartimos nuestras locuras y nos reímos juntos.",
+    "Día 295: Amo cuando me miras con esos ojos llenos de amor y cariño.",
+    "Día 296: Me fascina la manera en que me haces sentir en paz incluso en los días difíciles.",
+    "Día 297: Me encanta cuando me dices que lo que más quieres es verme feliz.",
+    "Día 298: Amo cuando me haces sentir como si fuera la persona más afortunada del mundo.",
+    "Día 299: Me haces sentir que no hay límites para lo que podemos lograr juntos.",
+    "Día 300: Me encanta cuando compartimos nuestras experiencias y reflexiones.",
+    "Día 301: Amo cuando me dices que siempre estarás aquí para apoyarme.",
+    "Día 302: Me fascina cómo logras hacerme sentir amado de una manera tan única.",
+    "Día 303: Me encanta cuando te preocupas por mi bienestar sin que te lo pida.",
+    "Día 304: Amo cuando me haces sentir que eres la razón por la que soy feliz.",
+    "Día 305: Me haces sentir increíblemente afortunado de tenerte a mi lado.",
+    "Día 306: Me encanta cuando compartimos nuestras metas y proyectos futuros.",
+    "Día 307: Amo cuando me dices que no importa lo que pase, siempre estarás a mi lado.",
+    "Día 308: Me fascina la manera en que cada día me haces sentir que todo es posible.",
+    "Día 309: Me encanta cuando compartimos nuestros pensamientos más profundos.",
+    "Día 310: Amo cuando me haces sentir que todo en la vida tiene sentido cuando estamos juntos.",
+    "Día 311: Me haces sentir que la vida es más hermosa solo por estar a tu lado.",
+    "Día 312: Me encanta cuando me dices que somos un equipo invencible.",
+    "Día 313: Amo cuando compartimos momentos que realmente significan algo para ambos.",
+    "Día 314: Me fascina cuando me haces sentir único y especial en tu vida.",
+    "Día 315: Me encanta cuando me haces sentir que todo lo que hacemos juntos es valioso.",
+    "Día 316: Amo cuando me dices que me haces sentir más amado cada día.",
+    "Día 317: Me haces sentir que no hay nada que no podamos superar juntos.",
+    "Día 318: Me encanta cuando me dices que me entiendes más que nadie.",
+    "Día 319: Amo cuando me haces sentir que eres mi hogar.",
+    "Día 320: Me fascina cómo logras hacerme sentir importante incluso en los momentos más simples.",
+    "Día 321: Me encanta cuando compartimos momentos tranquilos solo disfrutando de la compañía del otro.",
+    "Día 322: Amo cuando me haces sentir que somos uno solo.",
+    "Día 323: Me haces sentir que no necesito nada más que tu amor.",
+    "Día 324: Me encanta cuando me dices que lo más importante es que estemos juntos.",
+    "Día 325: Amo cuando me haces sentir que la vida es más hermosa con tu amor.",
+    "Día 326: Me fascina cuando me dices que no hay nada más valioso para ti que estar conmigo.",
+    "Día 327: Me encanta cuando nos reímos juntos de las cosas más simples.",
+    "Día 328: Amo cuando me dices que lo único que quieres es hacerme feliz.",
+    "Día 329: Me haces sentir que puedo lograr todo lo que me proponga.",
+    "Día 330: Me encanta cuando compartimos nuestras pasiones y nos entendemos perfectamente.",
+    "Día 331: Amo cuando me haces sentir amado sin necesidad de palabras.",
+    "Día 332: Me fascina cómo siempre encuentras una forma de sorprenderme de la mejor manera.",
+    "Día 333: Me encanta cuando nos damos tiempo para vivir el presente juntos.",
+    "Día 334: Amo cuando me dices que eres feliz de tenerme en tu vida.",
+    "Día 335: Me haces sentir como si no hubiera nada más importante que estar a tu lado.",
+    "Día 336: Me encanta cuando me dices que siempre estarás a mi lado sin importar qué.",
+    "Día 337: Amo cuando compartimos sueños y metas juntos.",
+    "Día 338: Me fascina la manera en que me haces sentir completo con solo tu presencia.",
+    "Día 339: Me encanta cuando me dices que mi felicidad es lo más importante para ti.",
+    "Día 340: Amo cuando me haces sentir que soy el mejor lugar donde estar.",
+    "Día 341: Me haces sentir que todo lo que hago tiene más valor a tu lado.",
+    "Día 342: Me encanta cuando me dices que no puedes esperar para crear más recuerdos juntos.",
+    "Día 343: Amo cuando me haces sentir tan amado, incluso en los días más difíciles.",
+    "Día 344: Me fascina cuando compartimos momentos de amor y compasión.",
+    "Día 345: Me encanta cuando me dices que te haces feliz solo al verme feliz.",
+    "Día 346: Amo cuando me haces sentir que todo es más fácil cuando estamos juntos.",
+    "Día 347: Me haces sentir que todo en la vida tiene un propósito cuando estás a mi lado.",
+    "Día 348: Me encanta cuando me dices que siempre estarás aquí para apoyarme.",
+    "Día 349: Amo cuando me haces sentir especial con pequeños gestos.",
+    "Día 350: Me fascina que siempre sepas cómo hacerme sonreír.",
+    "Día 351: Me encanta cuando me dices que eres feliz de compartir tu vida conmigo.",
+    "Día 352: Amo cuando me haces sentir que lo somos todo el uno para el otro.",
+    "Día 353: Me haces sentir que no hay nada que no podamos lograr juntos.",
+    "Día 354: Me encanta cuando me haces sentir que puedo ser yo mismo a tu lado.",
+    "Día 355: Amo cuando me dices que el amor que compartimos no tiene fin.",
+    "Día 356: Me fascina la forma en que siempre encuentras algo positivo incluso en los momentos difíciles.",
+    "Día 357: Me encanta cuando compartimos nuestros pensamientos y sentimientos sin barreras.",
+    "Día 358: Amo cuando me haces sentir que cada día es una nueva oportunidad para amarnos más.",
+    "Día 359: Me haces sentir que siempre hay un futuro brillante para nosotros.",
+    "Día 360: Me encanta cuando me dices que siempre estarás a mi lado sin importar lo que pase.",
+    "Día 361: Amo cuando me haces sentir que lo que más importa es nuestra felicidad juntos.",
+    "Día 362: Me fascina cómo siempre sabes cómo hacerme sentir amado.",
+    "Día 363: Me encanta cuando me dices que siempre seremos uno solo.",
+    "Día 364: Amo cuando me haces sentir que la vida es mejor a tu lado.",
+    "Día 365: TE AMO HOY Y SIEMPRE."
+    ];
+
+    const frasesContainer = document.getElementById('frases-container');
+
+    frases.forEach((frase) => {
+      const div = document.createElement('div');
+      div.className = 'frase';
+      div.textContent = frase;
+      frasesContainer.appendChild(div);
+    });
+  </script>
+
+</body>
+</html>
